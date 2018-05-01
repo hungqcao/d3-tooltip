@@ -1,0 +1,29 @@
+{
+  "name": "D3 tooltip",
+  "version": "1.0",
+  "description": "Tooltip for d3 visualization charts",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "hungqcao",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^3.5.17",
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "graceful-fs": "^4.1.11",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.6.1",
+    "gulp-git": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-shell": "^0.5.2",
+    "gulp-util": "^3.0.8",
+    "minimatch": "^3.0.3",
+    "run-sequence": "^1.2.2",
+    "tfx-cli": "^0.3.45"
+  }
+}
