@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    .d3-tooltip {
+        position: absolute;
+        text-align: center;
+        width: 60px;
+        height: 12px;
+        padding: 8px;
+        margin-top: -20px;
+        font: 10px sans-serif;
+        background: #ddd;
+        pointer-events: none;
+    }
+</style>
+
+<body>
+    <script type="text/javascript" src="../node_modules/d3/dist/d3.js"></script>
+    <script type="text/javascript" src="../index.js"></script>
+    <script>
+        var tip = d3.tip()
+            .attr('class', 'd3-tooltip')
+            .html(function (d) { return '<span>Blah</span>' + ' entries' })
+            .offset([0, 0])
+
+        var width = 960,
+            height = 500;
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        svg.append("g")
+            .attr("transform", "translate(480,50) rotate(60) scale(2)")
+            .append("rect")
+            .attr("width", 140)
+            .attr("height", 140)
+            .call(tip)
+            .on("mouseover", tip.mouseover)
+            .on("mousemove", tip.mousemove)
+            .on("mouseout", tip.mouseout);
+    </script>
+</body>
